@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="style/welcome.css">
+</head>
+<body>
+
+<h1 class="welcome w_text">Welcome !</h1>
+<h2 class="welcome c_text" onclick="goon()" id="loading">Continue to <mark>Kaly.com</mark></h2>
+
+
+
+<script type="text/javascript">
+	
+
+
+	function goon() {
+		document.getElementById("loading").outerHTML = "<p style='text-align:center;'><progress val='22' max='10'></p>";
+		setTimeout( function() { window.location.href ="home.html" } , 3000);
+	}
+
+	
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+html { 
+	background: url(https://wallpapercave.com/wp/sYKYdEe.jpg);
+	background-color: #2b2b2b;
+	background-repeat: all;
+	background-size: auto;
+ }
+
+
+.welcome { position: fixed;		
+	width: 100%;
+	text-align: center;
+	border-style: solid;
+	border-left: 0;
+	border-right: 0;
+	color:white;
+	background-color: black;
+ }
+
+ .w_text {
+	font-size: 500%;
+	bottom: 55%;
+ }
+
+ .c_text {
+ 	font-size: 300%;
+ 	opacity: 0.4;
+ 	top: 60%;
+ }
+
+ .c_text:hover { 
+ 	opacity: 1;
+ 	cursor: pointer;
+  }
+
+  .FullSize {
+  	max-width: 
+  	height: auto; }
+
+  a {color: white;
+  	text-decoration: none;}

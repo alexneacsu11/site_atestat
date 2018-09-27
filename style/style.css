@@ -1,0 +1,159 @@
+.top_bar { size: 100px;animation: fancy_top_bar 10s infinite;
+    animation-direction: alternate; z-index: 50;
+}
+
+.outline_top_dark {
+	border: solid;
+	background-color: #2d2d2d;
+	opacity: 1;
+	border-width: 0px;
+	text-align: center;
+	cursor: pointer;
+    animation: color 5s infinite;
+    animation-direction: alternate;
+    width: 12.5%;
+    border-radius: 20px 0px;
+    animation: buttonsanimate 4s infinite;
+    animation-direction: alternate-reverse;
+}
+
+.outline_top_dark:hover {
+	background-color: #4f4f4f;
+}
+
+.kaly_pic {
+	cursor: pointer;
+}
+.video_name {
+    animation: color 4s infinite;
+}
+
+.video_player {
+    border-style: solid;
+    width: 40%;
+    height: 315px;
+    left: 25%;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+
+}
+
+html {
+    background-color: #3d3d3d;
+
+}
+
+@keyframes color {
+    0% {
+        color: #45a3e5
+    }
+
+    30% {
+        color: #66bf39
+    }
+
+    60% {
+        color: #eb670f
+    }
+
+    90% {
+        color: #f35
+    }
+
+    100% {
+        color: #864cbf
+    }
+}
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
+@keyframes fancy_top_bar {
+    0% {
+        background-color: #45a3e5;
+        color: #45a3e5;
+    }
+
+    30% {
+        background-color: #66bf39;
+        color: #66bf39;
+    }
+
+    60% {
+        background-color: #eb670f;
+        color: #eb670f;
+    }
+
+    90% {
+        background-color: #f35;
+        color: #f35;
+    }
+
+    100% {
+        background-color: #864cbf;
+        color: #864cbf;
+    }
+}
+
+pre {
+    -webkit-animation-direction: color alternate;
+    animation-direction: alternate;
+    color: white;
+}
+
+.youtubeth { width: 200px; height: 150px; border-style: solid; border-color: #9a9a9a; margin-right: 5px; margin-left: 5px; z-index: 0}
+
+.youtubeth:hover { width: 250px; height: 175px; position: relative; margin-left: -15px; bottom: 10px; cursor: pointer; z-index: 0  }
+
+@keyframes buttonsanimate {
+    0% { border-radius: 20px 0px; }
+
+    10% { border-radius: 18px 2px; }
+
+    20% { border-radius: 16px 4px; }
+
+    30% { border-radius: 14px 6px; }
+
+    40% { border-radius: 12px 8px; }
+
+    50% { border-radius: 10px 10px; }
+
+    60% { border-radius: 8px 12px; }
+
+    70% { border-radius: 6px 14px; }
+
+    80% { border-radius: 4px 16px; }
+
+    90% { border-radius: 2px 18px; }
+
+    100% { border-radius: 0px 20px; }
+
+    
+}
+
+.kaly_text { position: relative; text-align: center; height:  }
+
+.h4_about_spacing { margin-top: 0px ; margin-bottom: 0px; }
+
+.w_v_chatbox { top: 20%; left: 99%;z-index:1; position: fixed; transition: all 2s; }
+
+.w_v_chatbox:hover { top: 20%; left: 80%;z-index:1; position: fixed; transition: all 2s;}
