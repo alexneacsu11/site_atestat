@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About</title>
+	<title>Despre Kaly</title>
 
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<script type="text/javascript" src="scripts/scripts.js"></script>
@@ -10,14 +10,15 @@
 </head>
 <body>
 <div>
-<table class="top_bar" style="background-color: transparent; position: fixed; width:100%; top:0%;left:0%;border-bottom-style: solid;border-bottom-color: #8c8c8c;">
-	<td style="cursor:pointer;position: relative; text-align: center; background-size: cover;width: 80px;background-image: url(resources/wpp.png);" onclick="load_page('welcome.html')"></td>
+<table class="top_bar">
+	<td class="kaly_logo" onclick="load_page('welcome.html')"></td>
 	<td class="outline_top_dark" onclick="load_page('home.html')"><h4> Home </h4></td> 
-	<td class="outline_top_dark" onclick="load_page('youtubevideos.html')"><h4> YouTube Videos </h4></td> 
-	<td class="outline_top_dark"><h4> Stream Highlights </h4></td>
-	<td class="outline_top_dark" onclick="load_page('watchlive.html')"><h4> Watch Live </h4></td>
-	<td class="outline_top_dark" onclick="load_page('about.html')"><h4> About </h4></td>
-	<td class="outline_top_dark" onclick="load_page('contact.html')"><h4> Contact </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('youtubevideos.html')"><h4> Gaming </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('entertainment.html')"><h4> Amuzament </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('education.html')"><h4> Educatie </h4></td>
+	<td class="outline_top_dark" onclick="load_page('watchlive.html')"><h4> Vezi Live </h4></td>
+	<td class="outline_top_dark selected_page" onclick="load_page('about.html')"><h4>Despre</h4></td>
+	<td class="outline_top_dark" onclick="load_page('contact.html')"><h4>Contact - Discord</h4></td> 
 
 	<td style="position: relative; text-align: center;"><image style="cursor:unset;" class="kaly_pic" src="resources/kaly.png" width="150	" height="50" /></td>
 </table>
@@ -25,35 +26,51 @@
 </div>
 
 
-<div style="border-style: solid;border-color: #3f3faa; text-align: center;">
-	<p style="font-size: 20px"> Few things about my personal life: </p>
-	<p class="h4_about_spacing">My name is Alex.</p>
+<form>
+	<h4 class="h4_style">Languages</h4>
+  <select id="ro_en_lan" size="1"  onclick="lang_select()">
+    <option>Romana</option>
+    <option>English</option>
+  </select>
+</form>
 
-	<p class="h4_about_spacing">I am an 18 years old romanian youtuber/streamer. The streaming platforms i use may alternate between YouTube and Twitch. I live in Romania and my main hobby is anyting about IT and computers.</p>
+<p id="demo"></p>
 
-	<p style="font-size: 20px"> Few things about my publc life: </p>
 
-	<p class="h4_about_spacing">Now , 26 september 2018 , I am not very popular. I have only 9 subscribers on YT and 6 followers on Twitch. I am using Tiwtch for streams and YouTube to upload videos on it.</p>
+<!-- De aici incepe descrierea in romana -->
+<div id="about_ro" style="border-style: solid;border-color: transparent; text-align: center; display: block;">
+	<p class="h5_about"> Despre site:</p>
+	<p class="h4_style"> Site-ul este un proiect pentru scoala , care imi va servii la obtinerea atestatului pentru competente informatice. Pe el puteti gasi atat videoclipuri educative cat si distractive , in mare parte realizate de mine dar totodata am sa fac si trimitere catre alti creeatori de continut , ale caror videoclipuri le urmaresc cand am nevoie de raspunsuri la diferite dileme.</p>
+	<p class="h4_style"> Pe pagina Home , puteti gasi mai multe informatii despre fiecare Tab al site-ului.</p>
 
-	<p class="h4_about_spacing">On twitch , you may find me as <a style="color: lightblue;" href="https://twitch.tv/kaly666">Kaly666</a> and on youtube as <a style="color:red;" href="https://www.youtube.com/channel/UCHz3A8S7ECVJAzYbPGgrefQ">Kaly</a></p>
+	<p class="h5_about" > Despre mine: </p>
+	<p class="h4_style">Numele meu este [To be filled] .</p>
 
-	<p class="h4_about_spacing">I am usually active on Discord , the most popular social platform for gamers , on one of the servers that I administrate. My Discord username is : Kaly#1127. If you want to talk with me , feel free to add me.</p>
+	<p class="h4_style">Sunt un elev care are o multime de hoby-uri , printre care se numara transmiterea in direct a jocurilor pe platforme precum Twitch.tv si YouTube si creearea si incarcarea de videoclipuri pe YouTube. In mare parte , limba in vorbita in timpul inregistrarilor si a transimsiunilor live este limba romana , dar daca am spectatori care nu inteleg limba romana ( lucru care se intampla destul de des ) , pot vorbi si in limba engleza..</p>
 
-	<p style="font-size: 20px;">Other Hobbies:</p>
+	<p class="h5_about"> Despre Kaly: </p>
 
-	<p class="h4_about_spacing">When I am not doing something else , I like to watch Anime or Tv series or Movies</p>
+	<p class="h4_style">Acum , pe 6 octombrie nu sunt foarte popular pe youtube si twitch , lucru care se datoreaza inactivitatii mele. Am doar 9 abonati pe YouTube si 6 urmaritori pe Twitch. In general folosesc Twitch pentru live-uri si youtube ca platforma de incarcare a videoclipurilor.</p>
 
-	<p class="h4_about_spacing">The Anime I watched:</p>
+	<p class="h4_style">Pe twitch ma puteti gasi aici : <a style="color: lightblue;" href="https://twitch.tv/kaly666">Kaly666</a>; si pe youtube :<a style="color:red;" href="https://www.youtube.com/channel/UCHz3A8S7ECVJAzYbPGgrefQ">Kaly</a>.</p>
+
+	<p class="h4_style">Platforma sociala pe care o folosesc este Discord , cea mai noua si populara platforma sociala pentru jucatorii de jocuri video , si in mare parte sunt pe unul dintre serverele pe care le administrez. Username-ul meu de discord este : Kaly#1127. Daca vreti sa vorbiti cu mine , simtiti-va liberi sa ma adaugati si sa-mi scrieti..</p>
+
+	<p class="h5_about">Alte hoby-uri:</p>
+
+	<p class="h4_style">Cand nu am o anumita ocupatie imi place sa ma uit la desene animate japoneze (Anime ) sau la seriale.</p>
+
+	<p class="h4_style">Animeurile pe care le-am vizionat (<a style="color: rgb(255,0,0);"> rosu = astept continuarea , daca mai e</a> / restul sunt terminate sau nu le mai urmaresc):</p>
 
 
 <p>
 	<ul style="list-style-type: circle;  list-style-position: inside;">
-			<li> Naruto 35 episodes</li>
-			<li> Konosuba</li>
+			<li> Naruto 35 episoade</li>
+			<li style="color: rgb(255,0,0);"> Konosuba</li>
 			<li> Akame Ga Kill</li>
 			<li> Code : Breaker</li>
-			<li> Re : 0</li>
-			<li> Noragami</li>
+			<li style="color: rgb(255,0,0);"> Re : 0</li>
+			<li style="color: rgb(255,0,0);"> Noragami</li>
 			<li> Erased</li>
 			<li> Future Diary</li>
 			<li> Another</li>
@@ -62,21 +79,101 @@
 	</ul>
 </p>
 
-<p class="h4_about_spacing">The Tv series I watched:</p>
+<p class="h4_style">Serialele pe care le-am vizionat ( <a style="color: lightblue">albastru = inca le urmaresc</a> / <a style="color: gray">gri = nu stiu daca mai au continuare dar inca ma intereseaza</a> ) :</p>
 	<ul style="list-style-type: square; list-style-position: inside;">
-			<li>The Walking Dead ( since 2012 untill present)</li>
-			<li>Fear of The Walking Dead ( since 2015 untill present)</li>
-			<li>The End of the F***ing World ( 1 season in the summer of 2018)</li>
-			<li>Lost in Space ( 1 season in the summer of 2018)</li>
-			<li>The 100 ( Watched all 5 seasons in this summer)</li>
-			<li>Supernatural ( First 4 seasons then few episodes from season 6 , then i quited it)</li>
-			<li>IZombie ( First 3 seasons , this summer , then i quited it)</li>
+			<li style="color: lightblue">The Walking Dead ( din 2012 pana in prezent)</li>
+			<li style="color: lightblue">Fear of The Walking Dead ( din 2015 pana in prezent)</li>
+			<li style="color: gray">The End of the F***ing World ( in vara lui 2018)</li>
+			<li style="color: gray">Lost in Space ( primul sezon vara , in 2018)</li>
+			<li style="color: lightblue">The 100 ( l-am inceput vara , in 2018 iar urmatorul sezon apare in 2019)</li>
+			<li>Supernatural ( Am vazut primele 4 sezoane apoi l-am abandonat)</li>
+			<li>IZombie ( Am vazut primele 3 sezoane apoi l-am abandonat)</li>
 
 	</ul>	
+</div> <!-- Aici se terminat descrierea in romana -->
 
 
 
+	
+<div  id="about_en" style="border-style: solid;border-color: transparent; text-align: center; display: none;">
+
+	<p class="h5_about"> About this site:</p>
+	<p class="h4_style"> This site is a school project , that will serve me to get a diploma. On this site you can find educative and entertaining videos , mostly made by myself but i will also refer to videos made by other people , that i use when i got no answer for different questions.</p>
+	<p class="h4_style">On the Home page you can find more information about the whole site.</p>
+
+	<p class="h5_about"> About me: </p>
+	<p class="h4_style">My name is XXXX.</p>
+
+	<p class="h4_style">I am an 18 years old romanian youtuber/streamer. The streaming platforms i use may alternate between YouTube and Twitch. I live in Romania and my main hobby is anyting about IT and computers.</p>
+
+	<p class="h5_about"> About Kaly: </p>
+
+	<p class="h4_style">Now , 06 october 2018 , I am not very popular. I have only 9 subscribers on YT and 6 followers on Twitch. I am using Tiwtch for streams and YouTube to upload videos on it.</p>
+
+	<p class="h4_style">On twitch , you may find me as <a style="color: lightblue;" href="https://twitch.tv/kaly666">Kaly666</a> and on youtube as <a style="color:red;" href="https://www.youtube.com/channel/UCHz3A8S7ECVJAzYbPGgrefQ">Kaly</a></p>
+
+	<p class="h4_style">I am usually active on Discord , the most popular social platform for gamers , on one of the servers that I administrate. My Discord username is : Kaly#1127. If you want to talk with me , feel free to add me.</p>
+
+	<p class="h5_about">Other Hobbies:</p>
+
+	<p class="h4_style">When I am not doing something else , I like to watch Anime or Tv series or Movies</p>
+
+	
+
+
+<p>
+	<p class="h4_style">The Anime I watched:(<a style="color: rgb(255,0,0);"> red = if it will continue , i will watch it </a> / the others are over from airing or i am not interesed in them anymore)</p>
+	<ul style="list-style-type: circle;  list-style-position: inside;">
+			<li> Naruto 35 episodes</li>
+			<li style="color: rgb(255,0,0);"> Konosuba</li>
+			<li> Akame Ga Kill</li>
+			<li> Code : Breaker</li>
+			<li style="color: rgb(255,0,0);"> Re : 0</li>
+			<li style="color: rgb(255,0,0);"> Noragami</li>
+			<li> Erased</li>
+			<li> Future Diary</li>
+			<li> Another</li>
+			<li> Zankyou no terror</li>
+			<li> Golden Time</li>
+	</ul>
+</p>
+
+<p class="h4_style">The Tv series I watched ( <a style="color: lightblue">lightblue = the ones i still watch</a> / <a style="color: gray">gray = i don't know if it will continue but i am still interesed</a> ) :</p>
+	<ul style="list-style-type: square; list-style-position: inside;">
+			<li style="color: lightblue">The Walking Dead ( since 2012 untill present)</li>
+			<li style="color: lightblue">Fear of The Walking Dead ( since 2015 untill present)</li>
+			<li style="color: gray">The End of the F***ing World ( 1 season in the summer of 2018)</li>
+			<li style="color: gray">Lost in Space ( 1 season in the summer of 2018)</li>
+			<li style="color: lightblue">The 100 ( Watched all 5 seasons in this summer)</li>
+			<li>Supernatural ( First 4 seasons then few episodes from season 6 , then i quited it)</li>
+			<li>IZombie ( First 3 seasons , this summer , then i quited it)</li>
+	</ul>	
 
 </div>
+
+
+<script type="text/javascript">
+	function lang_select(){ // language 0 = romana , 1 = engleza
+		
+		var language = document.getElementById("ro_en_lan").value;
+
+		if(language == "Romana")
+		{
+			document.getElementById("about_ro").style.display = "block";
+			document.getElementById("about_en").style.display = "none";
+		}
+
+		if(language == "English")
+		{
+			document.getElementById("about_ro").style.display = "none";
+			document.getElementById("about_en").style.display = "block";
+		}
+
+		
+	}
+
+
+</script>
+
 </body>
 </html>

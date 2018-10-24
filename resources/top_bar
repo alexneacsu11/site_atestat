@@ -1,0 +1,14 @@
+<div>
+<table class="top_bar" style="background-color: transparent; position: fixed; width:100%; top:0%;left:0%;border-bottom-style: solid;border-bottom-color: #8c8c8c;">
+	<td style="cursor:pointer;position: relative; text-align: center; background-size: cover;width: 80px;background-image: url(resources/wpp.png);" onclick="load_page('welcome.html')"></td>
+	<td class="outline_top_dark" onclick="load_page('home.html')"><h4> Home </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('youtubevideos.html')"><h4> YouTube Videos </h4></td> 
+	<td class="outline_top_dark"><h4> Stream Highlights </h4></td>
+	<td class="outline_top_dark" onclick="load_page('watchlive.html')"><h4> Watch Live </h4></td>
+	<td class="outline_top_dark" onclick="load_page('about.html')"><h4> About </h4></td>
+	<td class="outline_top_dark" onclick="load_page('contact.html')"><h4> Contact </h4></td> 
+
+	<td style="position: relative; text-align: center;"><image style="cursor:unset;" class="kaly_pic" src="resources/kaly.png" width="150	" height="50" /></td>
+</table>
+<hr style="opacity: 0; margin-top: 100px;">
+</div>

@@ -1,31 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contact</title>
+	<title>Contact - Discord</title>
 
-<link rel="stylesheet" type="text/css" href="style/style.css">
-<script type="text/javascript" src="scripts/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script type="text/javascript" src="scripts/scripts.js"></script>
+
 
 </head>
 <body>
 
-
 <div>
-<table class="top_bar" style="background-color: transparent; position: fixed; width:100%; top:0%;left:0%;border-bottom-style: solid;border-bottom-color: #8c8c8c;">
-	<td style="cursor:pointer;position: relative; text-align: center; background-size: cover;width: 80px;background-image: url(resources/wpp.png);" onclick="load_page('welcome.html')"></td>
+<table class="top_bar">
+	<td class="kaly_logo" onclick="load_page('welcome.html')"></td>
 	<td class="outline_top_dark" onclick="load_page('home.html')"><h4> Home </h4></td> 
-	<td class="outline_top_dark" onclick="load_page('youtubevideos.html')"><h4> YouTube Videos </h4></td> 
-	<td class="outline_top_dark"><h4> Stream Highlights </h4></td>
-	<td class="outline_top_dark" onclick="load_page('watchlive.html')"><h4> Watch Live </h4></td>
-	<td class="outline_top_dark" onclick="load_page('about.html')"><h4> About </h4></td>
-	<td class="outline_top_dark" onclick="load_page('contact.html')"><h4> Contact </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('youtubevideos.html')"><h4> Gaming </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('entertainment.html')"><h4> Amuzament </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('education.html')"><h4> Educatie </h4></td>
+	<td class="outline_top_dark" onclick="load_page('watchlive.html')"><h4> Vezi Live </h4></td>
+	<td class="outline_top_dark" onclick="load_page('about.html')"><h4>Despre</h4></td>
+	<td class="outline_top_dark selected_page" onclick="load_page('contact.html')"><h4>Contact - Discord</h4></td> 
 
 	<td style="position: relative; text-align: center;"><image style="cursor:unset;" class="kaly_pic" src="resources/kaly.png" width="150	" height="50" /></td>
 </table>
 <hr style="opacity: 0; margin-top: 100px;">
 </div>
 
+<h4>Method 1 to reach me:</h4>
+<p style="font-size: 30px;">In order to contact me , i recommand you to use <a href="https://www.discordapp.com/register" style="color:lightblue">Discord</a>  (easy registration).</p>
+<hr>
+<h4>Method 2 one way message ( that means you won't receive anything back but you won't need to register ) :</h4>
 
 
+
+<div class="card card-panel" id="main"> 
+
+            <div class="row">
+                <div class="input-field s6 col">
+                    <input class="input_box" id="username" type="text" value="Name" onfocus="this.value = ''"><p></p>
+                </div>
+            </div>
+            	<div>
+                	<input class="input_box content_box" id="content" type="text" value="Mesage" onfocus="this.value = ''">
+            	</div>
+</div>
+		<p></p>
+        <a style="color:black;font-family: serif; font-size: 20px; text-decoration: unset;" 
+        href="#!">Send message</a> <span style="color: white;"> Note: This is a one way communication. No way to receive message unless you give a contact adress.</span>
+
+    <h2 id="sent-unsent"></h2>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type=
+    "text/javascript">
+    </script> 
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
+    </script>
+    <script type="text/javascript">
+        function refresh(){location.reload();}
+    </script> 
+        <script>
+
+    $(function() {
+        $('a').click(function(e) {
+        var url = 'https://discordapp.com/api/webhooks/498208936495808517/YUSaici_lSAH3nTkaX6W7MkS9bWVPnDH5cCtlWNPA4e3Fh33RMSbfJDN4H-1LWQ-h1vY';
+        var content = $("#content").val();
+        var username = $("#username").val();
+        var avatar_url = $("#avatar_url").val();
+        $.post(url,
+    {"content": content, "username": username, "avatar_url": avatar_url},
+
+        
+        function(){
+            Materialize.toast('Mesaj Trimis!', 4000);
+            document.getElementById("main").innerHTML = "<h1 style='color:white; text-align:center;'>Mesajul a fost trimis.</h1><button onclick='setTimeout(refresh(), 3000)'>Trimite alt mesaj.</button>"; 
+
+        });
+        });
+    });
+
+    </script>
+
+<style type="text/css">
+.input_box { width: 200px; height: auto; font-size: 20px; transition:all 1s;}
+.input_box:focus { background-color: black; color: white; transition: all 1s;}
+
+.content_box:focus { width: 1200px;  }
+</style>
 </body>
 </html>
