@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div>
+
 <table class="top_bar">
 	<td class="kaly_logo" onclick="load_page('welcome.html')"></td>
 	<td class="outline_top_dark" onclick="load_page('home.html')"><h4> Home </h4></td> 
@@ -24,16 +24,64 @@
 	<td style="position: relative; text-align: center;"><image style="cursor:unset;" class="kaly_pic" src="resources/kaly.png" width="150	" height="50" /></td>
 </table>
 <hr style="opacity: 0; margin-top: 100px;">
+
+    <h4 class="h4_style">Languages</h4>
+  <select id="ro_en_lan" size="1"  onclick="lang_select()">
+    <option>Romana</option>
+    <option>English</option>
+  </select>
+</form>
+
+<div id="about_ro" style="border-style: solid;border-color: transparent; text-align: center; display: block;"><!-- begining of ro -->
+<div class='page_center'>
+<h4 style="font-size: 40px;" class="fancy_text">Metoda 1 : Suna-ma sau scrie-mi </h4>
+<p style="font-size: 25px; color: rgb(30,150,30);">Pentru a ma contacta trebuie sa va faceti cont pe <a href="https://www.discordapp.com/register" style="color:lightblue">Discord</a> (inregistrare usoara).</p>
+<p style="font-size: 25px; color: rgb(30,150,30);">Dupa inregistrare , adaugati "Kaly#1127" sau alaturati-va serverului meu <a href="www.discord.com/" style="color: lightblue">la acest link</a> si trimiti-mi mesaj. </p>
 </div>
 
-<h4>Method 1 to reach me:</h4>
-<p style="font-size: 30px;">In order to contact me , i recommand you to use <a href="https://www.discordapp.com/register" style="color:lightblue">Discord</a>  (easy registration).</p>
 <hr>
-<h4>Method 2 one way message ( that means you won't receive anything back but you won't need to register ) :</h4>
+
+<div class='page_center'>
+<h4 style="font-size: 40px;" class="fancy_text">Metoda 2 : Formular de contact </h4>
 
 
 
-<div class="card card-panel" id="main"> 
+<div class="card card-panel" id="main">
+
+            <div class="row">
+                <div class="input-field s6 col">
+                    <input class="input_box" id="username" type="text" value="Name" onfocus="this.value = ''"><p></p>
+                </div>
+            </div>
+                <div>
+                    <input class="input_box content_box" id="content" type="text" value="Mesage" onfocus="this.value = ''">
+                </div>
+</div>
+
+        <p></p>
+        <div class="outline_top_dark button_x" style="text-align: center; position: relative; left: 45%"><a style="color:black;font-family: serif; font-size: 20px; text-decoration: unset;" 
+        href="#!">Trimite mesaj</a></div> <p><span style="color: white;"> Nota: Este o singura cale de acces. Pentru a va putea contacta , trebuie sa imi lasati o adresa sau un id.</span></p>
+
+    <h2 id="sent-unsent"></h2>
+</div>
+</div> <!-- ending of ro -->
+
+
+<div id="about_en" style="border-style: solid;border-color: transparent; text-align: center; display: none;"><!-- begining of english -->
+<div class='page_center'>
+<h4 style="font-size: 40px;" class="fancy_text">Method 1 : Call or Text me</h4>
+<p style="font-size: 25px; color: rgb(30,150,30);">In order to contact me , i recommand you to use <a href="https://www.discordapp.com/register" style="color:lightblue">Discord</a> (easy registration).</p>
+<p style="font-size: 25px; color: rgb(30,150,30);">After registering , add "Kaly#1127" or join my server at <a href="www.discord.com/" style="color: lightblue">this link</a> and message me. </p>
+</div>
+
+<hr>
+
+<div class='page_center'>
+<h4 style="font-size: 40px;" class="fancy_text">Method 2 : Contact form </h4>
+
+
+
+<div class="card card-panel" id="main">
 
             <div class="row">
                 <div class="input-field s6 col">
@@ -44,12 +92,18 @@
                 	<input class="input_box content_box" id="content" type="text" value="Mesage" onfocus="this.value = ''">
             	</div>
 </div>
+
 		<p></p>
-        <a style="color:black;font-family: serif; font-size: 20px; text-decoration: unset;" 
-        href="#!">Send message</a> <span style="color: white;"> Note: This is a one way communication. No way to receive message unless you give a contact adress.</span>
+        <div class="outline_top_dark button_x" style="text-align: center; position: relative; left: 45%"><a style="color:black;font-family: serif; font-size: 20px; text-decoration: unset;" 
+        href="#!">Send message</a></div> <p><span style="color: white;"> Note: This is a one way communication. No way to receive message unless you give a contact adress.</span></p>
 
     <h2 id="sent-unsent"></h2>
-    </main>
+</div>
+</div> <!-- ending of english -->
+
+
+
+
     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type=
     "text/javascript">
     </script> 
@@ -72,13 +126,34 @@
 
         
         function(){
-            Materialize.toast('Mesaj Trimis!', 4000);
+           
             document.getElementById("main").innerHTML = "<h1 style='color:white; text-align:center;'>Mesajul a fost trimis.</h1><button onclick='setTimeout(refresh(), 3000)'>Trimite alt mesaj.</button>"; 
 
         });
         });
     });
 
+    </script>
+
+    <script type="text/javascript">
+            function lang_select(){ // language 0 = romana , 1 = engleza
+        
+        var language = document.getElementById("ro_en_lan").value;
+
+        if(language == "Romana")
+        {
+            document.getElementById("about_ro").style.display = "block";
+            document.getElementById("about_en").style.display = "none";
+        }
+
+        if(language == "English")
+        {
+            document.getElementById("about_ro").style.display = "none";
+            document.getElementById("about_en").style.display = "block";
+        }
+
+        
+    }
     </script>
 
 <style type="text/css">
