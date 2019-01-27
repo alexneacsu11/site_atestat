@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<title>Pre-Alpha Page Builder</title>
+<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Slabo+27px" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script type="text/javascript" src="scripts/scripts.js"></script>
+
+
+</head>
+<body>
+		<div>
+<table class="top_bar">
+	<td class="kaly_logo" onclick="load_page('welcome.html')"></td>
+	<td class="outline_top_dark" onclick="load_page('home.html')"><h4> Home </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('youtubevideos.html')"><h4> Gaming </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('tools.html')"><h4> Unelte </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('education.html')"><h4> Educatie </h4></td>
+	<td class="outline_top_dark" onclick="load_page('watchlive.html')"><h4> Vezi Live </h4></td>
+	<td class="outline_top_dark" onclick="load_page('about.html')"><h4>Despre</h4></td>
+	<td class="outline_top_dark" onclick="load_page('contact.html')"><h4>Contact - Discord</h4></td> 
+
+	<td style="position: relative; text-align: center;"><image style="cursor:unset;" class="kaly_pic" src="resources/kaly.png" width="150	" height="50" /></td>
+</table>
+<hr style="opacity: 0; margin-top: 100px;">
+</div>
+
+
+	<h1 class="h5_about">Pre - Alpha Site builder</h1>
+	<div>
+	<pre>
+		Nota:
+		Versiunea 0.0.1;
+		-Panou de control
+		-Campuri unde se introduce informatia
+		-Nefunctional [ Unealta nu poate inca sa genereze pagini web din cauza unei erori]
+	</pre>
+	<div style="position: absolute; left: 70%; top: 15%; ; background-color: black; border: solid black 20px; color: white; border-radius: 20%; text-align: center;">
+		<p>Panou de control</p>
+		<p><button onclick="content_adder('row')">Adauga randuri</button></p>
+		<p><button onclick="content_adder('button')">Adauga butoane</button></p>
+		<p><button onclick="page_builder()">Construieste pagina</button></p>
+	</div>
+	</div>
+	<div>
+		<h4 class="h4-style" style="color: pink;">
+			Pozitie butoane:
+			<select id="frame_position">
+				<option value="1">Butoane Sus [ Similar cu pagina aceasta ]</option>
+				<option value="2">Butoane pe lateral [ Asemanator cu blogurile ] </option>
+			</select>
+		<div id="new_buttons"></div>
+		</h4>
+
+		<h4 class="h4-style" style="color: pink;">
+			Titlu :  
+			<input type="text-box" name="title-box" id="title-box">
+		</h4>
+
+		<h4 class="h4-style" style="color: pink;">
+			Continut:
+				<div id="new_content"></div>
+			
+		</h4>
+
+		
+		<hr>
+		<content contextmenu="xaxaxa"></content>
+</div>
+	
+	<iframe style="width: 100%; height: 1080px" id="page_keeper">
+
+	</iframe>
+	
+<script type="text/javascript">
+	var rows_counter = 0;
+	var buttons_counter = 0;
+
+	function page_builder() { 
+		var framepose = document.getElementById('frame_position').value; 
+		var title_prep = document.getElementById('title-box').value;
+		var content_prep = ' ';
+		var button_name;
+		// for (var i = 0; i >= buttons_counter ; i++) {
+		// 	button_name[i] = document.getElementById('button_title').value;
+		// }
+
+		for (i=0; i<=rows_counter;i++){
+			content_prep = document.getElementById('content-box'+i).value + content_prep ;
+		}
+		
+
+
+		var content = "<h1>"+title_prep+"</h1>" + '<content>' + content_prep + '</content>';
+
+		var codelines = '<html>'+tabs+content+'</html>';
+
+		makeitreal(codelines);
+	}
+
+	function content_adder(wta) { 
+		if ( wta == 'row'){
+		var newrow = document.createElement('P');
+		newrow.setAttribute('id','input-box'+rows_counter);
+	   	var x = document.createElement("INPUT");
+    	x.setAttribute('type', 'text-box');
+    	x.setAttribute('name', 'content-box'+rows_counter);
+    	x.setAttribute('value', ' ');
+    	document.getElementById('new_content').appendChild(newrow);
+    	document.getElementById('input-box'+rows_counter).innerHTML = 'Rand' + rows_counter + ':' ;
+    	document.getElementById('input-box'+rows_counter).appendChild(x);
+
+    	rows_counter=rows_counter+1; }
+
+    	if (wta == 'button'){
+    	var newbutton = document.createElement('P');
+		newbutton.setAttribute('id','button-box'+buttons_counter);
+	   	var x = document.createElement("INPUT");
+    	x.setAttribute('type', 'text-box');
+    	x.setAttribute('name', 'button'+buttons_counter);
+    	x.setAttribute('value', ' ');
+    	document.getElementById('new_buttons').appendChild(newbutton);
+    	document.getElementById('button-box'+buttons_counter).innerHTML = 'Buton' + buttons_counter + ':' ;
+    	document.getElementById('button-box'+buttons_counter).appendChild(x);
+
+    	buttons_counter = buttons_counter+1;}
+	}
+
+	function makeitreal(page){
+		var x = document.createElement("HTML")
+		document.getElementById('page_keeper').innerHTML = codelines;
+	}
+
+
+</script>
+</body>
+</html>

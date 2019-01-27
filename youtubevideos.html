@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html style="animation: bg_vids 20s infinite; animation-direction: alternate; transition: all; ">
 <head>
 	<title>YouTube Videos</title>
-
+	<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Slabo+27px" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<script type="text/javascript" src="scripts/scripts.js"></script>
 
@@ -14,7 +14,7 @@
 	<td class="kaly_logo" onclick="load_page('welcome.html')"></td>
 	<td class="outline_top_dark" onclick="load_page('home.html')"><h4> Home </h4></td> 
 	<td class="outline_top_dark selected_page" onclick="load_page('youtubevideos.html')"><h4> Gaming </h4></td> 
-	<td class="outline_top_dark" onclick="load_page('entertainment.html')"><h4> Amuzament </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('tools.html')"><h4> Unelte </h4></td> 
 	<td class="outline_top_dark" onclick="load_page('education.html')"><h4> Educatie </h4></td>
 	<td class="outline_top_dark" onclick="load_page('watchlive.html')"><h4> Vezi Live </h4></td>
 	<td class="outline_top_dark" onclick="load_page('about.html')"><h4>Despre</h4></td>
@@ -28,12 +28,13 @@
 
 
 
-
-<p><h1 style="color: #ffa799;" >There you can see the latest posted videos on youtube.</h1><h4 id="show_video_name" class="video_name" style="position: fixed; z-index: 2; background-color: rgba(20,20,20,0.5); top: 6%;">Video name [Mouse over]:</h4></p>
+<div style="background-color: rgba(61,61,61,0.8);" id="content_block">
+<p><h1 style="color: #ffa799; " >There you can see the latest posted videos on youtube.</h1><h4 id="show_video_name" class="video_name" style="position: fixed; z-index: 2; background-color: rgba(20,20,20,0.5); top: 7%;">Video name [Mouse over]:</h4></p>
 
 <p class="video_player" id="video_player"><img src="resources/videoplayer-tmp.png"></p>
 <div class="com-section">
-	
+</div>
+
 </div>
 <script type="text/javascript">
  	
