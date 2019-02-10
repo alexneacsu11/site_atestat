@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<title>Home</title>
+<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Slabo+27px" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script type="text/javascript" src="scripts/scripts.js"></script>
+
+
+
+</head>
+<body onload="">
+<div>
+<table class="top_bar">
+	<td class="kaly_logo" onclick="load_page('welcome.html')"></td>
+	<td class="outline_top_dark selected_page" onclick="load_page('home.html')"><h4> Home </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('youtubevideos.html')"><h4> Gaming </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('tools.html')"><h4> Unelte </h4></td> 
+	<td class="outline_top_dark" onclick="load_page('education.html')"><h4> Educatie </h4></td>
+	<td class="outline_top_dark" onclick="load_page('watchlive.html')"><h4> Vezi Live </h4></td>
+	<td class="outline_top_dark" onclick="load_page('about.html')"><h4>Despre</h4></td>
+	<td class="outline_top_dark" onclick="load_page('contact.html')"><h4>Contact - Discord</h4></td> 
+
+	<td style="position: relative; text-align: center;"><image style="cursor:unset;" class="kaly_pic" src="resources/kaly.png" width="150	" height="50" /></td>
+</table>
+<hr style="opacity: 0; margin-top: 100px;">
+</div>
+
+<form>
+	<h4 class="h4_style">Languages</h4>
+  <select id="ro_en_lan" size="1"  onclick="lang_select()">
+    <option>Romana</option>
+    <option>English</option>
+  </select>
+</form>
+
+
+<div class="info  new_stuff" id="home_en" style="border-style: solid;border-color: transparent; text-align: center; display: none;">
+
+	<h1 style="margin-top: 5%" class="h5_about">Welcome to the home page!</h1>
+	
+	<div class="h4_style">
+
+	<p>This is the home page. There you cand find usefull informations about this site.</p>
+	<hr>
+	<p>This site has 7 pages that have different types of content , some of them having language switching tools from english to romanian and reverse , like this one.</p>
+	<hr>
+	<p>The Gaming tab , will lead you to a collection of recordings from <a id="ytchannel" href="https://www.youtube.com/channel/UCHz3A8S7ECVJAzYbPGgrefQ" style="color: red;text-shadow:2px 2px rgb(105,0,0)">Kaly's Youtube Channel</a> , where are either recorded videos , either streamed sessions.</p>
+	<hr>
+	<p>The "Tools" tab, is similar to "Educatie"("Education") but instead of videos you will find images.</p>
+	<hr>
+	<p>The "Educatie"(Education) tab , will show some tutorial like videos , that will teach you different things. The videos found here , are either recomandation , either from Kaly's secondary youtube account.</p>
+	<hr>
+	<p>The "Vezi Live"(Watch Live) tab , will take you to a page where you can see the Live Stream of Kaly if it happens to be streaming in that time.</p>
+	<hr>
+	<p>The "Despre"(About) tab , will show a page that provides informations about Kaly in romanian but also in english. The information you will find here contains a bit of creator's information but also kaly's information. </p>
+	<hr>
+	<p>The "Contact-Discord" tab , is a form like page , that will let you send messages to Kaly . Also there you cand find information about how to contact him.</p>
+	<hr>
+	
+	</div>
+
+</div>
+
+<div class="info new_stuff" id="home_ro" style="border-style: solid;border-color: transparent; text-align: center; display: block;">
+
+	<h1 style="margin-top: 5%" class="h5_about">Bine ati venit pe pagina Acasa</h1>
+
+	<div class="h4_style">
+
+	<p>Pe aceasta pagina , puteti gasi informatii utile despre site.</p>
+	<hr>
+	<p>Acest site este alcatuit din 7 pagini care contin diferite tipuri de continut .Cateva dintre acestea , oferindu-va posibilitatea de a putea alege intre limba romana si limba engleza , precum aceasta.</p>
+	<hr>
+	<p>La "Gaming" , puteti gasi o colectie de inregistrari de pe <a id="ytchannel" href="https://www.youtube.com/channel/UCHz3A8S7ECVJAzYbPGgrefQ" style="color: red;text-shadow:2px 2px rgb(105,0,0)">canalul de youtube al lui Kaly</a> , unde puteti gasi fie videoclipuri inregistrate , fie sesiuni care au fost transmise in flux live..</p>
+	<hr>
+	<p>La "Amuzament" , puteti gasi diferinte videclipuri amuzante sau diferite portiuni de videoclipuri care va sunt recomandate. Totodata , aici veti gasi cate o gluma de fiecare data cand intrati pe pagina..</p>
+	<hr>
+	<p>La "Educatie" , puteti gasi videclipuri educative sub forma de tutorial , pentru a putea invata diferite lucruri. Videoclipurile gasite aici , sunt fie recomandari , fie de pe canalul secundar al lui Kaly.</p>
+	<hr>
+	<p>La "Vezi Live" , puteti vedea , in cazul in care Kaly transmite in flux live , direct pe pagina , ceea ce transmite el , fiind necesara doar apasarea unui buton in cazul in care platforma pe care transmite nu este cea predefinita.</p>
+	<hr>
+	<p>La "Despre" , puteti gasi informatii despre Kaly in romana dar si in engleza. Informatiile pe care le veti gasi aici , contin putin despre informatiile persoanei care l-a creeat pe Kaly , dar si despre Kaly.</p>
+	<hr>
+	<p>La "Contact-Discord" , puteti lua legatura cu Kaly prin doua metode diferite , acestea constand intr-un Form si o alta metoda de contact.</p>
+	<hr>
+
+	</div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+	function lang_select(){ // language 0 = romana , 1 = engleza
+		
+		var language = document.getElementById("ro_en_lan").value;
+		if(language == "Romana")
+		{
+			document.getElementById("home_ro").style.display = "block";
+			document.getElementById("home_en").style.display = "none";
+		}
+		if(language == "English")
+		{
+			document.getElementById("home_ro").style.display = "none";
+			document.getElementById("home_en").style.display = "block";
+		}
+		
+	}
+</script>
+</body>
+</html>
